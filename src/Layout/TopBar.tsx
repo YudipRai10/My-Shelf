@@ -16,7 +16,7 @@ function TopBar({ setShowSideBar }: BarProps): React.ReactElement {
     <nav
       className="md:bg-gradient-to-b from-white from-0% via-light via-50% to-light to-90% flex justify-between items-center md:gap-2 xl:gap-18 px-2 lg:px-12 pt-9.5 pb-6 text-primary"
       data-aos="fade-left"
-      data-aos-duration="1000"
+      data-aos-duration="700"
     >
       <div className="flex items-center shadow-low rounded-5xl w-4/5 bg-white">
         <div className="flex items-center gap-2.5 text-xl py-3 pl-3 lg:pl-9.5 pr-5 rounded-l-5xl bg-small cursor-pointer">

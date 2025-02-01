@@ -1,3 +1,5 @@
+import { transform } from "typescript";
+
 /** @type {import('tailwindcss').Config} */
 export default {
   content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
@@ -12,6 +14,8 @@ export default {
         light: "#DCD9D9",
         button: "#FA7C54",
         small: "#F7F7FA",
+        quote: "#FA7C54E5",
+        ellipse: "#8A317C",
       },
       colors: {
         primary: "#4D4D4D",
@@ -37,11 +41,27 @@ export default {
         secondary: "565px",
         side: "306px",
         small: "120px",
+        carousel: "500px",
       },
       borderRadius: {
         sidebar: "10px",
         "4xl": "33px",
         "5xl": "40px",
+      },
+      animation: {
+        fadeIn: "fadeIn 0.7s ease-in-out",
+      },
+      keyframes: {
+        fadeIn: {
+          "0%": {
+            transform: "translateX(-30px)",
+            opacity: "0",
+          },
+          "100%": {
+            transform: "translateX(0)",
+            opacity: "100",
+          },
+        },
       },
     },
   },

@@ -8,7 +8,7 @@ function Register(): React.ReactElement {
   return (
     <div className="min-h-screen flex justify-center items-center">
       <div
-        className="bg-white rounded-xl sm:pt-16 sm:px-17 sm:pb-12 p-10 shadow-custom max-w-[80%] w-secondary"
+        className="bg-white rounded-xl sm:pt-16 sm:px-17 sm:pb-12 p-10 max-w-[70%] shadow-custom  w-secondary"
         data-aos="fade-down"
         data-aos-duration="1000"
       >

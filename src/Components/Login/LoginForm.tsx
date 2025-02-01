@@ -2,6 +2,7 @@ import React from "react";
 import LoginCheck from "./LoginCheck";
 import Button from "../ui/button/Button";
 import useForm from "../../CustomHook/UseForm";
+import FormInput from "../FormInput/FormInput";
 
 function LoginForm(): React.ReactElement {
   // useForm Initialize
@@ -10,7 +11,6 @@ function LoginForm(): React.ReactElement {
     password: "",
   };
 
-  
   const { values, errors, handleChange, handleSubmit } = useForm({
     initialValues,
     formType: "login",
@@ -18,37 +18,28 @@ function LoginForm(): React.ReactElement {
 
   // To map input
   const inputData = [
-    { label: "Email", value: "email" },
-    { label: "Password", value: "password" },
+    { label: "Email", type: "email", value: "email" },
+    { label: "Password", type: "password", value: "password" },
   ];
 
   return (
     <form onSubmit={handleSubmit}>
       <div className="mb-6">
         <div>
-          {inputData.map((data, index) => (
-            <div key={index} className="flex flex-col gap-2 mb-6 relative">
-              <label className="text-base leading-4 font-semibold">
-                {data.label}
-              </label>
-              <input
-                className={`text-base p-1 sm:p-4 outline-none border rounded-lg ${
-                  errors[data.value] ? "border-red-500" : "border-light"
-                }`}
-                type={data.value}
-                name={data.value}
-                value={values[data.value]}
-                onChange={handleChange}
-                placeholder={
-                  data.value === "email" ? "username@collegename.ac.in" : ""
-                }
-              />
-              {errors.email && (
-                <p className="text-red-500 text-xs absolute -bottom-4">
-                  {errors[data.value]}
-                </p>
-              )}
-            </div>
+          {inputData.map((data) => (
+            <FormInput
+              key={data.value}
+              extraClass="mb-6"
+              label={data.label}
+              value={values[data.value]}
+              type={data.type}
+              name={data.value}
+              handleChange={handleChange}
+              errors={errors[data.value]}
+              placeholder={
+                data.type === "email" ? "username@collegename.ac.in" : ""
+              }
+            />
           ))}
         </div>
       </div>
