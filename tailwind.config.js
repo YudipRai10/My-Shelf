@@ -16,7 +16,8 @@ export default {
       colors: {
         primary: "#4D4D4D",
         small: "#ABABAB",
-        inactive: "#8A8A8A",
+        side: "#8A8A8A",
+        light: "#F3F3F7",
       },
       spacing: {
         8.5: "35px",
@@ -38,7 +39,9 @@ export default {
         small: "120px",
       },
       borderRadius: {
-        "4xl": "40px",
+        sidebar: "10px",
+        "4xl": "33px",
+        "5xl": "40px",
       },
     },
   },

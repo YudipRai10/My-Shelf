@@ -6,7 +6,7 @@ const Logo = ({
   width,
   className,
 }: {
-  height: string;
+  height?: string;
   width: string;
   className?: string;
 }): React.ReactElement => {
