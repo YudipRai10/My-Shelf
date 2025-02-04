@@ -6,13 +6,13 @@ interface DotsProps extends QuotesDataProps {
 }
 
 function SliderDots({
-  data,
+  quotes,
   currentSlide,
   setCurrentSlide,
 }: DotsProps): React.ReactElement {
   return (
     <div className="flex items-center gap-2.5">
-      {data.map((item) => (
+      {quotes.map((item) => (
         <button
           key={item.id}
           onClick={() => setCurrentSlide(item.id)}

@@ -22,6 +22,10 @@ export default {
         small: "#ABABAB",
         side: "#8A8A8A",
         light: "#F3F3F7",
+        rating: "#A7A7A7",
+      },
+      fontSize: {
+        xxs: "10px",
       },
       spacing: {
         8.5: "35px",

@@ -2,7 +2,7 @@ import React from "react";
 import LoginCheck from "./LoginCheck";
 import Button from "../ui/button/Button";
 import useForm from "../../CustomHook/UseForm";
-import FormInput from "../FormInput/FormInput";
+import FormInput from "../ui/forminput/FormInput";
 
 function LoginForm(): React.ReactElement {
   // useForm Initialize
@@ -47,7 +47,10 @@ function LoginForm(): React.ReactElement {
       {/* Remember/Forget */}
       <LoginCheck />
 
-      <Button variant="submit" type="submit" className="mb-9">
+      <Button
+        type="submit"
+        className="bg-button w-full rounded-lg py-4 text-white font-semibold text-base leading-4 mb-9"
+      >
         Login
       </Button>
     </form>

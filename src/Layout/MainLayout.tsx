@@ -8,19 +8,23 @@ function MainLayout(): React.ReactElement {
   const [showSideBar, setShowSideBar] = useState<boolean>(false);
 
   return (
-    <main className="main h-screen px-8.5 pt-12 pb-9.5">
-      <section className="flex h-full">
+    <main className="main h-screen flex flex-col px-8.5 pt-12 pb-9.5">
+      <section className="flex h-full flex-grow">
         {/* Sidebar */}
         <aside
-          className="w-40 md:w-side bg-white rounded-l-sidebar hidden md:block"
+          className="lg:w-side min-w-40 bg-white rounded-l-sidebar hidden md:block"
           data-aos="fade-right"
-          data-aos-duration="700"
+          data-aos-duration="800"
         >
           <SideBar showSideBar={showSideBar} setShowSideBar={setShowSideBar} />
         </aside>
 
         {/* Main Area */}
-        <div className="flex-grow">
+        <div
+          className="flex flex-col flex-grow"
+          data-aos="fade-left"
+          data-aos-duration="800"
+        >
           <TopBar setShowSideBar={setShowSideBar} />
           <Outlet />
         </div>

@@ -1,7 +1,7 @@
 import React from "react";
 import useForm from "../../CustomHook/UseForm";
 import Button from "../ui/button/Button";
-import FormInput from "../FormInput/FormInput";
+import FormInput from "../ui/forminput/FormInput";
 
 function RegisterForm(): React.ReactElement {
   const initialValues = {
@@ -45,7 +45,10 @@ function RegisterForm(): React.ReactElement {
         ))}
       </div>
 
-      <Button variant="submit" type="submit" className="mb-9">
+      <Button
+        type="submit"
+        className="bg-button w-full rounded-lg py-4 text-white font-semibold text-base leading-4 mb-9"
+      >
         Register
       </Button>
     </form>

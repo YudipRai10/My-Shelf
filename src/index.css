@@ -16,3 +16,23 @@ body {
   background-color: theme("backgroundColor.primary");
   font-family: theme("fontFamily.inter");
 }
+
+.hide-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+/* .border-gradient {
+  border: 1px solid transparent;
+  border-radius: 10px;
+  border-image: linear-gradient(to right, #eb5231 0%, #571fcf 100%);
+  border-image-slice: 1;  Ensure the gradient covers the entire border 
+} */
+
+/* .arrival::after {
+  content: "";
+  position: absolute;
+  height: 101.5%;
+  width: 100.5%;
+  border-radius: 10px;
+  background-image: linear-gradient(to right, #eb5231 0%, #571fcf 100%);
+  z-index: -1;
+} */

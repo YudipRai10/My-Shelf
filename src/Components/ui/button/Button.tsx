@@ -1,31 +1,11 @@
-import React from "react";
+import React, { ButtonHTMLAttributes } from "react";
 
-const variants = {
-  submit:
-    "bg-button w-full rounded-lg py-4 text-white font-semibold text-base leading-4",
-};
-
-type ButtonVariant = keyof typeof variants;
-
-interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
-  variant?: ButtonVariant;
+interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
   children: React.ReactNode;
 }
 
-const Button: React.FC<ButtonProps> = ({
-  variant = "submit",
-  children,
-  className,
-  ...props
-}) => {
-  // Combine the class from the variant with any additional custom className
-  const buttonClass = `${variants[variant]} ${className}`;
-
-  return (
-    <button className={buttonClass} {...props}>
-      {children}
-    </button>
-  );
-};
+function Button({ children, ...props }: ButtonProps) {
+  return <button {...props}>{children}</button>;
+}
 
 export default Button;

@@ -4,10 +4,10 @@ import BottomSection from "../../Components/Home/BottomSection/BottomSection";
 
 function Home(): React.ReactElement {
   return (
-    <>
+    <div className="flex flex-col h-[87%] bg-secondary">
       <TopSection />
       <BottomSection />
-    </>
+    </div>
   );
 }
 
