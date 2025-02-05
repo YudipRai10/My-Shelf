@@ -1,10 +1,23 @@
-import React from "react";
-import { useNavigate } from "react-router-dom";
+import React, { useContext } from "react";
+import { useNavigate, useLocation } from "react-router-dom";
 import caret from "../../assets/caret.png";
 import search from "../../assets/search.png";
+import { BookContext } from "../../Context/Context";
 
 function SearchBar(): React.ReactElement {
+  const { searchValue, setSearchValue } = useContext(BookContext);
   const navigate = useNavigate();
+  const location = useLocation();
+
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    setSearchValue(e.target.value);
+  };
+
+  const handleFocus = () => {
+    if (location.pathname !== "/search") {
+      navigate("/search");
+    }
+  };
 
   return (
     <div className="flex items-center shadow-low rounded-5xl w-4/5 bg-white">
@@ -18,7 +31,9 @@ function SearchBar(): React.ReactElement {
           type="text"
           placeholder="Search"
           className="w-full border-none outline-none ml-5"
-          onFocus={() => navigate("/search")}
+          value={searchValue}
+          onChange={handleChange}
+          onFocus={handleFocus} // Trigger navigation only if not already on /search
         />
         <img src={search} alt="search" className="pr-5 object-contain" />
       </div>

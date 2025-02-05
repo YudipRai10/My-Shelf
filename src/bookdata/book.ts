@@ -7,10 +7,10 @@ import roadtoreact from "../assets/roadtoreact.png";
 import sprint from "../assets/sprint.png";
 import thedesign from "../assets/thedesign.png";
 
-export interface Availability {
-  hardCopy: boolean;
-  eBook: boolean;
-  audioBook: boolean;
+export interface Avail {
+  "Hard Copy": boolean;
+  "E-Book": boolean;
+  "Audio Book": boolean;
 }
 
 export interface Books {
@@ -21,31 +21,33 @@ export interface Books {
   rating: number;
   category: string;
   subCategory?: string;
-  availability: Availability;
+  availability: Avail;
   status: "In-shelf" | "Borrowed";
   location: string;
   newArrival: boolean;
   img: string;
+  edition?: string;
 }
 
 export const books: Books[] = [
   {
     id: 1,
-    title: "Don’t Make Me think",
+    title: "Don’t Make Me Think",
     author: "Steve Krug",
     year: 2000,
     rating: 4.5,
     category: "Computer Science",
     subCategory: "UX Design",
     availability: {
-      hardCopy: true,
-      eBook: true,
-      audioBook: true,
+      "Hard Copy": true,
+      "E-Book": true,
+      "Audio Book": true,
     },
     status: "In-shelf",
     location: "CS A-15",
     newArrival: true,
     img: `${dontmake}`,
+    edition: "Second Edition",
   },
   {
     id: 2,
@@ -56,9 +58,9 @@ export const books: Books[] = [
     category: "Religions",
     subCategory: "Christianity",
     availability: {
-      hardCopy: true,
-      eBook: true,
-      audioBook: true,
+      "Hard Copy": true,
+      "E-Book": true,
+      "Audio Book": true,
     },
     status: "In-shelf",
     location: "CS A-15",
@@ -74,9 +76,9 @@ export const books: Books[] = [
     category: "Fantasy",
     subCategory: "Magic",
     availability: {
-      hardCopy: true,
-      eBook: true,
-      audioBook: true,
+      "Hard Copy": true,
+      "E-Book": true,
+      "Audio Book": true,
     },
     status: "In-shelf",
     location: "CS A-15",
@@ -85,16 +87,16 @@ export const books: Books[] = [
   },
   {
     id: 4,
-    title: "Learn UX:Designing Great Products with Agile Teams",
+    title: "Learn UX: Designing Great Products with Agile Teams",
     author: "Jeff Gothelf",
     year: 2014,
     rating: 4.5,
     category: "Computer Science",
     subCategory: "UX Design",
     availability: {
-      hardCopy: true,
-      eBook: true,
-      audioBook: true,
+      "Hard Copy": true,
+      "E-Book": true,
+      "Audio Book": true,
     },
     status: "In-shelf",
     location: "CS A-15",
@@ -110,9 +112,9 @@ export const books: Books[] = [
     category: "Computer Science",
     subCategory: "UX Design",
     availability: {
-      hardCopy: false,
-      eBook: true,
-      audioBook: false,
+      "Hard Copy": false,
+      "E-Book": true,
+      "Audio Book": false,
     },
     status: "Borrowed",
     location: "Sriram",
@@ -129,9 +131,9 @@ export const books: Books[] = [
     category: "Computer Science",
     subCategory: "UX Design",
     availability: {
-      hardCopy: true,
-      eBook: true,
-      audioBook: true,
+      "Hard Copy": true,
+      "E-Book": true,
+      "Audio Book": true,
     },
     status: "In-shelf",
     location: "CS A-15",
@@ -147,9 +149,9 @@ export const books: Books[] = [
     category: "Computer Science",
     subCategory: "Frontend Design",
     availability: {
-      hardCopy: true,
-      eBook: true,
-      audioBook: true,
+      "Hard Copy": true,
+      "E-Book": true,
+      "Audio Book": true,
     },
     status: "In-shelf",
     location: "CS A-15",
@@ -164,9 +166,153 @@ export const books: Books[] = [
     rating: 5,
     category: "Financial MGMT",
     availability: {
-      hardCopy: true,
-      eBook: true,
-      audioBook: true,
+      "Hard Copy": true,
+      "E-Book": true,
+      "Audio Book": true,
+    },
+    status: "In-shelf",
+    location: "CS A-15",
+    newArrival: false,
+    img: `${richdad}`,
+  },
+  {
+    id: 9,
+    title: "SpiderMan",
+    author: "Stan Lee",
+    year: 1980,
+    rating: 4.5,
+    category: "Fantasy",
+    subCategory: "Adventure",
+    availability: {
+      "Hard Copy": true,
+      "E-Book": true,
+      "Audio Book": true,
+    },
+    status: "In-shelf",
+    location: "CS A-15",
+    newArrival: true,
+    img: `${dontmake}`,
+  },
+  {
+    id: 10,
+    title: "Source Code: My Beginnings",
+    author: "Bill Gates",
+    year: 2020,
+    rating: 4.5,
+    category: "Life",
+    subCategory: "Auto-Bio",
+    availability: {
+      "Hard Copy": true,
+      "E-Book": true,
+      "Audio Book": true,
+    },
+    status: "In-shelf",
+    location: "CS A-15",
+    newArrival: true,
+    img: `${bible}`,
+  },
+  {
+    id: 11,
+    title: "The Housemaid",
+    author: "Freida McFadden",
+    year: 2002,
+    rating: 4.5,
+    category: "Thriller",
+    subCategory: "Crime",
+    availability: {
+      "Hard Copy": true,
+      "E-Book": true,
+      "Audio Book": true,
+    },
+    status: "In-shelf",
+    location: "CS A-15",
+    newArrival: true,
+    img: `${harrypotter}`,
+  },
+  {
+    id: 12,
+    title: "You're My Little Cuddle Bug",
+    author: "Nicola Edwards",
+    year: 2023,
+    rating: 4.5,
+    category: "Kids",
+    subCategory: "Adventure",
+    availability: {
+      "Hard Copy": true,
+      "E-Book": true,
+      "Audio Book": true,
+    },
+    status: "In-shelf",
+    location: "CS A-15",
+    newArrival: true,
+    img: `${learnUx}`,
+  },
+  {
+    id: 13,
+    title: "The Hunger Games",
+    author: "Suzanne Collins",
+    year: 1988,
+    rating: 4.5,
+    category: "Thriller",
+    subCategory: "Dystopian",
+    availability: {
+      "Hard Copy": false,
+      "E-Book": true,
+      "Audio Book": false,
+    },
+    status: "Borrowed",
+    location: "Sriram",
+    newArrival: true,
+    img: `${thedesign}`,
+  },
+  {
+    id: 14,
+    title: "Harry Potter and Goblet of Fire",
+    author: "J.K. Rowling",
+    year: 2000,
+    rating: 4.5,
+    category: "Fantasy",
+    subCategory: "Magic",
+    availability: {
+      "Hard Copy": true,
+      "E-Book": true,
+      "Audio Book": true,
+    },
+    status: "In-shelf",
+    location: "CS A-15",
+    newArrival: true,
+    img: `${harrypotter}`,
+  },
+  {
+    id: 15,
+    title: "To Kill a MockingBird",
+    author: "Harper Lee",
+    year: 1960,
+    rating: 4.5,
+    category: "Novels",
+    subCategory: "Literature",
+    availability: {
+      "Hard Copy": true,
+      "E-Book": true,
+      "Audio Book": true,
+    },
+    status: "In-shelf",
+    location: "CS A-15",
+    newArrival: false,
+    img: `${roadtoreact}`,
+  },
+  {
+    id: 16,
+    title: "The Book Thief",
+    author: "Markus Zusak",
+    year: 2005,
+    rating: 5,
+    category: "Novel",
+    subCategory: "Historical",
+    availability: {
+      "Hard Copy": true,
+      "E-Book": true,
+      "Audio Book": true,
     },
     status: "In-shelf",
     location: "CS A-15",

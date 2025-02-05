@@ -9,7 +9,7 @@ interface bookProps {
 function HomeCard({ book }: bookProps): React.ReactElement {
   return (
     <Link to={`/book/${book.id}`}>
-      <div className="bg-white w-40 rounded-sidebar flex flex-col gap-3 py-4 pr-4 pl-5">
+      <div className="bg-white w-40 rounded-10 flex flex-col gap-3 py-4 pr-4 pl-5">
         <img src={book.img} alt={book.title} className="object-contain" />
         <div className="flex flex-col gap-1">
           <p className="text-xs leading-4 overflow-hidden whitespace-nowrap text-ellipsis">

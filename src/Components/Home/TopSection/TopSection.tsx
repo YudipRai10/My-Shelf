@@ -9,9 +9,7 @@ function TopSection(): React.ReactElement {
       <Today />
 
       {/* Section for new arrivals */}
-      <div className="">
-        <NewArrival />
-      </div>
+      <NewArrival />
     </div>
   );
 }

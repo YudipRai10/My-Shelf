@@ -18,7 +18,7 @@ function Today(): React.ReactElement {
   const [currentSlide, setCurrentSlide] = useState(1);
 
   return (
-    <div className="text-white bg-quote py-7 px-4 lg:px-6 rounded-sidebar">
+    <div className="text-white bg-quote py-7 px-4 lg:px-6 rounded-10">
       <Slider quotes={quotes} currentSlide={currentSlide} />
       <SliderDots
         quotes={quotes}

@@ -12,7 +12,7 @@ function MainLayout(): React.ReactElement {
       <section className="flex h-full flex-grow">
         {/* Sidebar */}
         <aside
-          className="lg:w-side min-w-40 bg-white rounded-l-sidebar hidden md:block"
+          className="w-60 2xl:w-side bg-white rounded-l-sidebar hidden flex-shrink-0 md:block"
           data-aos="fade-right"
           data-aos-duration="800"
         >

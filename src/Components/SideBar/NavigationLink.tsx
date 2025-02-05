@@ -56,7 +56,9 @@ function NavigationLink({ setShowSideBar }: BarProps): React.ReactElement {
             className={({ isActive }) =>
               isActive ? "text-primary" : "text-side"
             }
-            onClick={() => setShowSideBar(false)}
+            onClick={() => {
+              setShowSideBar(false);
+            }}
           >
             {data.label}
           </NavLink>

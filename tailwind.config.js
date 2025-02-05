@@ -16,6 +16,7 @@ export default {
         small: "#F7F7FA",
         quote: "#FA7C54E5",
         ellipse: "#8A317C",
+        status: "#42BB4E",
       },
       colors: {
         primary: "#4D4D4D",
@@ -23,6 +24,8 @@ export default {
         side: "#8A8A8A",
         light: "#F3F3F7",
         rating: "#A7A7A7",
+        cover: "#F1F1F1",
+        preview: "#F76B56",
       },
       fontSize: {
         xxs: "10px",
@@ -46,14 +49,16 @@ export default {
         side: "306px",
         small: "120px",
         carousel: "500px",
+        search: "75px",
       },
       borderRadius: {
-        sidebar: "10px",
+        10: "10px",
         "4xl": "33px",
         "5xl": "40px",
       },
       animation: {
         fadeIn: "fadeIn 0.7s ease-in-out",
+        fadeDown: "fadeDown 1s ease-out",
       },
       keyframes: {
         fadeIn: {
@@ -64,6 +69,16 @@ export default {
           "100%": {
             transform: "translateX(0)",
             opacity: "100",
+          },
+        },
+        fadeDown: {
+          "0%": {
+            opacity: 0,
+            transform: "translateY(-20px)",
+          },
+          "100%": {
+            opacity: 1,
+            transform: "translateY(0)",
           },
         },
       },
