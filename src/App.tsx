@@ -1,10 +1,5 @@
 import React, { useEffect } from "react";
-import {
-  Route,
-  BrowserRouter as Router,
-  Routes,
-  useLocation,
-} from "react-router-dom";
+import { Route, BrowserRouter as Router, Routes } from "react-router-dom";
 import Login from "./Page/Login/Login";
 import Home from "./Page/Home/Home";
 import SingleBook from "./Page/SingleBook/SingleBook";
