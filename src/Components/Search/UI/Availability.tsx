@@ -16,7 +16,7 @@ function Availability({ availability }: AvailabilityProps): React.ReactElement {
   return (
     <ul className="text-base flex flex-col gap-2">
       {availabilityList.map((list) => (
-        <li key={list} className="flex items-center gap-2">
+        <li key={list} className="flex items-center gap-2 whitespace-nowrap">
           {availability[list] ? <TickIcon /> : <CrossIcon />}
           {list}
         </li>

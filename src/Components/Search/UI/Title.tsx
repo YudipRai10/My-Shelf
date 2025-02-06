@@ -16,7 +16,7 @@ function Title({
   edition,
 }: TitleProps): React.ReactElement {
   return (
-    <div className="flex gap-12 ml-6">
+    <div className="flex items-center gap-12 ml-6">
       <img
         src={img}
         alt={title}

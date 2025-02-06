@@ -6,6 +6,8 @@ import richdad from "../assets/richdad.png";
 import roadtoreact from "../assets/roadtoreact.png";
 import sprint from "../assets/sprint.png";
 import thedesign from "../assets/thedesign.png";
+import creativity from "../assets/creativity.png";
+import rocket from "../assets/rocket.png";
 
 export interface Avail {
   "Hard Copy": boolean;
@@ -318,5 +320,41 @@ export const books: Books[] = [
     location: "CS A-15",
     newArrival: false,
     img: `${richdad}`,
+  },
+  {
+    id: 17,
+    title: "Rocket Surgery Made Easy",
+    author: "Steve Krug",
+    year: 2005,
+    rating: 5,
+    category: "Novel",
+    subCategory: "Historical",
+    availability: {
+      "Hard Copy": true,
+      "E-Book": true,
+      "Audio Book": true,
+    },
+    status: "In-shelf",
+    location: "CS A-15",
+    newArrival: false,
+    img: `${rocket}`,
+  },
+  {
+    id: 18,
+    title: "The Practice of Creativity",
+    author: "Steve Krug",
+    year: 2005,
+    rating: 5,
+    category: "Novel",
+    subCategory: "Historical",
+    availability: {
+      "Hard Copy": true,
+      "E-Book": true,
+      "Audio Book": true,
+    },
+    status: "In-shelf",
+    location: "CS A-15",
+    newArrival: false,
+    img: `${creativity}`,
   },
 ];

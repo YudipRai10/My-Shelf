@@ -1,5 +1,10 @@
 import React, { useEffect } from "react";
-import { Route, BrowserRouter as Router, Routes } from "react-router-dom";
+import {
+  Route,
+  BrowserRouter as Router,
+  Routes,
+  useLocation,
+} from "react-router-dom";
 import Login from "./Page/Login/Login";
 import Home from "./Page/Home/Home";
 import SingleBook from "./Page/SingleBook/SingleBook";
@@ -15,22 +20,21 @@ function App(): React.ReactElement {
   useEffect(() => {
     AOS.init();
   }, []);
+
   return (
-    <>
-      <Router>
-        <Routes>
-          <Route path="/" element={<Welcome />} />
-          <Route path="/login" element={<Login />} />
-          <Route path="/register" element={<Register />} />
-          <Route element={<MainLayout />}>
-            <Route path="/home" element={<Home />} />
-            <Route path="/search" element={<Search />} />
-            <Route path="/book/:bookid" element={<SingleBook />} />
-            <Route path="/my_shelf" element={<MyShelf />} />
-          </Route>
-        </Routes>
-      </Router>
-    </>
+    <Router>
+      <Routes>
+        <Route path="/" element={<Welcome />} />
+        <Route path="/login" element={<Login />} />
+        <Route path="/register" element={<Register />} />
+        <Route element={<MainLayout />}>
+          <Route path="/home" element={<Home />} />
+          <Route path="/search" element={<Search />} />
+          <Route path="/book/:bookid" element={<SingleBook />} />
+          <Route path="/my_shelf" element={<MyShelf />} />
+        </Route>
+      </Routes>
+    </Router>
   );
 }
 

@@ -17,6 +17,10 @@ export default {
         quote: "#FA7C54E5",
         ellipse: "#8A317C",
         status: "#42BB4E",
+        preview: "#F76B56",
+        list: "#4D4D4D",
+        borrow: "#F27851",
+        read: "#41B64D",
       },
       colors: {
         primary: "#4D4D4D",
@@ -26,6 +30,11 @@ export default {
         rating: "#A7A7A7",
         cover: "#F1F1F1",
         preview: "#F76B56",
+        feature: "#333333",
+        edition: "#9A9A9A",
+        star: "#FFCB45",
+        highlight: "#F27851",
+        list: "#666666",
       },
       fontSize: {
         xxs: "10px",
