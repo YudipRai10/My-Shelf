@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useContext } from "react";
 import { useParams } from "react-router-dom";
 import { books } from "../../bookdata/book";
 import { GoBack } from "../../Components/SingleBook/GoBack";
@@ -7,8 +7,11 @@ import BookDescription from "../../Components/SingleBook/BookDescription";
 import AboutAuthor from "../../Components/SingleBook/AboutAuthor";
 import { Overview } from "../../Components/SingleBook/Overview";
 import Brief from "../../Components/SingleBook/Brief";
+import { BookContext } from "../../Context/Context";
+import { DetailsModal } from "../../Components/Modal/DetailsModal";
 
 function SingleBook(): React.ReactElement {
+  const { showModal } = useContext(BookContext);
   const { bookid } = useParams();
   const newId = Number(bookid);
 
@@ -62,6 +65,8 @@ function SingleBook(): React.ReactElement {
 
         <Brief />
       </div>
+
+      {showModal && <DetailsModal />}
     </div>
   );
 }

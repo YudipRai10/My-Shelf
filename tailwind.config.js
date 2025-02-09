@@ -21,6 +21,7 @@ export default {
         list: "#4D4D4D",
         borrow: "#F27851",
         read: "#41B64D",
+        overlay: "#000000",
       },
       colors: {
         primary: "#4D4D4D",
@@ -35,6 +36,7 @@ export default {
         star: "#FFCB45",
         highlight: "#F27851",
         list: "#666666",
+        lightBorder: "#D6D6D6",
       },
       fontSize: {
         xxs: "10px",

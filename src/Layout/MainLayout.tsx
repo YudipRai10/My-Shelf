@@ -8,7 +8,7 @@ function MainLayout(): React.ReactElement {
   const [showSideBar, setShowSideBar] = useState<boolean>(false);
 
   return (
-    <main className="main h-screen flex flex-col px-8.5 pt-12 pb-9.5">
+    <main className="main h-screen px-8.5 pt-12 pb-9.5">
       <section className="flex h-full flex-grow">
         {/* Sidebar */}
         <aside
@@ -21,7 +21,7 @@ function MainLayout(): React.ReactElement {
 
         {/* Main Area */}
         <div
-          className="flex flex-col flex-grow"
+          className="flex flex-col flex-grow relative"
           data-aos="fade-left"
           data-aos-duration="800"
         >

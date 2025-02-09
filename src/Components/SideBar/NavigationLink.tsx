@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useContext } from "react";
 import home from "../../assets/home.png";
 import homeActive from "../../assets/homeActive.png";
 import search from "../../assets/search.png";
@@ -7,8 +7,10 @@ import shelf from "../../assets/shelf.png";
 import shelfActive from "../../assets/shelfActive.png";
 import { NavLink, useLocation } from "react-router-dom";
 import { BarProps } from "../../Layout/TopBar";
+import { BookContext } from "../../Context/Context";
 
 function NavigationLink({ setShowSideBar }: BarProps): React.ReactElement {
+  const { setShowModal } = useContext(BookContext);
   const location = useLocation();
 
   const navData = [
@@ -58,6 +60,7 @@ function NavigationLink({ setShowSideBar }: BarProps): React.ReactElement {
             }
             onClick={() => {
               setShowSideBar(false);
+              setShowModal(false);
             }}
           >
             {data.label}

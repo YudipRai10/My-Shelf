@@ -1,9 +1,10 @@
-import React from "react";
+import React, { useContext } from "react";
 import { StarRating } from "../ui/rating/StarRating";
 import Availability from "../Search/UI/Availability";
 import Status from "../Search/UI/Status";
 import { WhiteDropDown } from "../ui/svg/Svg";
 import { Avail } from "../../bookdata/book";
+import { BookContext } from "../../Context/Context";
 
 interface DescriptionProps {
   id: number;
@@ -28,6 +29,18 @@ const BookDescription: React.FC<DescriptionProps> = ({
   status,
   location,
 }) => {
+  const { setShowModal, setIsBorrow } = useContext(BookContext);
+
+  const clickBorrow = () => {
+    setIsBorrow(true);
+    setShowModal(true);
+  };
+
+  const clickReadNow = () => {
+    setIsBorrow(false);
+    setShowModal(true);
+  };
+
   return (
     <div className="ml-20 2xl:w-carousel">
       {/* Title */}
@@ -70,10 +83,16 @@ const BookDescription: React.FC<DescriptionProps> = ({
 
       {/* Borrow/Read Now buttons */}
       <div className="flex items-center gap-9">
-        <button className="bg-borrow text-white px-14 py-5 rounded-md font-semibold text-xl leading-3">
+        <button
+          onClick={clickBorrow}
+          className="bg-borrow text-white px-14 py-5 rounded-md font-semibold text-xl leading-3"
+        >
           BORROW
         </button>
-        <button className="bg-read text-white px-16 py-5 rounded-md ml-1 text-xl leading-3 whitespace-nowrap">
+        <button
+          onClick={clickReadNow}
+          className="bg-read text-white px-16 py-5 rounded-md ml-1 text-xl leading-3 whitespace-nowrap"
+        >
           Read Now
         </button>
       </div>
