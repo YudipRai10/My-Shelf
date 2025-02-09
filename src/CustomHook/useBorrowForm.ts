@@ -19,8 +19,6 @@ export const useBorrowForm = ({ initialValues }: BorrowProps) => {
   const [errors, setErrors] = useState<FormErrors>({});
   const [isSubmitted, setIsSubmitted] = useState<boolean>(false);
 
-  const { setShowModal } = useContext(BookContext);
-
   const handleChange = (
     e: React.ChangeEvent<
       HTMLSelectElement | HTMLInputElement | HTMLTextAreaElement
