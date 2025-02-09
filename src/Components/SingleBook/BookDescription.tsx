@@ -6,7 +6,7 @@ import { WhiteDropDown } from "../ui/svg/Svg";
 import { Avail } from "../../bookdata/book";
 import { BookContext } from "../../Context/Context";
 
-interface DescriptionProps {
+export interface DescriptionProps {
   id: number;
   title: string;
   author: string;

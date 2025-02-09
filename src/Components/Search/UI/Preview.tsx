@@ -9,9 +9,11 @@ interface PreviewProps {
 
 export const Preview: React.FC<PreviewProps> = ({ status, id }) => {
   const navigate = useNavigate();
+
   const handlePreview = (id: number) => {
     navigate(`/book/${id}`);
   };
+
   return (
     <div className="flex justify-center items-center gap-16 flex-grow">
       {status === "In-shelf" ? <HeartIcon /> : <HeartBorderIcon />}

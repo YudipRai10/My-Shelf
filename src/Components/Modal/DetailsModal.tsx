@@ -8,8 +8,13 @@ import { TodayDate } from "./UI/TodayDate";
 import { SerialNoInput } from "./UI/SerialNoInput";
 import { DesciptionInput } from "./UI/DesciptionInput";
 import { AfterSubmission } from "./UI/AfterSubmission";
+import { Books } from "../../bookdata/book";
 
-export const DetailsModal: React.FC = () => {
+interface DetailsModalProps {
+  singleBook: Books;
+}
+
+export const DetailsModal: React.FC<DetailsModalProps> = ({ singleBook }) => {
   const { setShowModal, isBorrow } = useContext(BookContext);
 
   const {
@@ -65,7 +70,7 @@ export const DetailsModal: React.FC = () => {
             <>
               <p className="font-semibold text-xl mb-10">Fill Up the Details</p>
 
-              <form onSubmit={handleSubmit}>
+              <form onSubmit={(e) => handleSubmit(e, singleBook)}>
                 {/* Today's date */}
                 <TodayDate />
 

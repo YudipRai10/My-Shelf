@@ -22,6 +22,7 @@ export default {
         borrow: "#F27851",
         read: "#41B64D",
         overlay: "#000000",
+        borrowed: "#A0A0A0",
       },
       colors: {
         primary: "#4D4D4D",
@@ -37,6 +38,8 @@ export default {
         highlight: "#F27851",
         list: "#666666",
         lightBorder: "#D6D6D6",
+        shelfTab: "#868686",
+        little: "#747373",
       },
       fontSize: {
         xxs: "10px",

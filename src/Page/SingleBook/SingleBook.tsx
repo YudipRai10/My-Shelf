@@ -66,7 +66,7 @@ function SingleBook(): React.ReactElement {
         <Brief />
       </div>
 
-      {showModal && <DetailsModal />}
+      {showModal && <DetailsModal singleBook={singleBook} />}
     </div>
   );
 }
